@@ -26,6 +26,7 @@ Route::group([
 ], function ($router) {
 
     $router->group(['prefix' => 'order'], function ($router){
-        $router->post('/registration', [OrderController::class, 'registration']);
+        $router->post('/index', [OrderController::class, 'index']);
+        $router->post('/create', [OrderController::class, 'create']);
     });
 });

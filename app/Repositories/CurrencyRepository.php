@@ -5,11 +5,16 @@ namespace App\Repositories;
 
 
 use App\Repositories\Base\Repository;
+use Illuminate\Database\Eloquent\Model;
 
 class CurrencyRepository extends Repository
 {
-    public function findByCurrencyPriceId()
+
+    protected $model;
+
+    public function __construct(Model $model)
     {
-        dd("oumad");
+        parent::__construct($model);
+        $this->model = $model;
     }
 }

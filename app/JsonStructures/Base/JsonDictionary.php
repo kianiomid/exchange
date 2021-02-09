@@ -7,12 +7,9 @@ class JsonDictionary
 {
     const NS_ID = 'id';
     const NS_USERS = 'users';
-    const NS_F_NAME = 'f_name';
-    const NS_L_NAME = 'l_name';
+    const NS_NAME = 'name';
     const NS_USERNAME = 'username';
     const NS_EMAIL = 'email';
-    const NS_MOBILE = 'mobile';
-    const NS_NAME = 'name';
     const NS_DESCRIPTOR = 'descriptor';
     const NS_SIGN = 'sign';
     const NS_ENABLE = 'enable';

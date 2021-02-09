@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\CurrencyPrice;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +15,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        User::factory(1)->create();
+        CurrencyPrice::factory(3)->create();
+
+         $this->call(CurrencySeeder::class);
     }
 }

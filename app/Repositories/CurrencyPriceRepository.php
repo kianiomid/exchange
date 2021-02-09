@@ -6,7 +6,6 @@ namespace App\Repositories;
 
 use App\Repositories\Base\Repository;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\DB;
 
 class CurrencyPriceRepository extends Repository
 {

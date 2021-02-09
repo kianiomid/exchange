@@ -56,6 +56,11 @@ class OrderController extends Controller
     }
 
 
+    /**
+     * @param OrderRequest $request
+     * @return \Illuminate\Http\Response
+     * @throws ErrorException
+     */
     public function create(OrderRequest $request)
     {
 
@@ -88,7 +93,6 @@ class OrderController extends Controller
             DB::rollBack();
             throw new ErrorException(trans('response.errors.error_storing_for_information'));
         }
-
 
         $trackingCodeJson = (new TrackingOrderJson($trackingCode))->toArray();
         return JsonResponse::response($trackingCodeJson, trans('response.general.success'), 200, 200);
